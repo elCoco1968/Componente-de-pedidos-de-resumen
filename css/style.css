@@ -1,0 +1,170 @@
+:root{
+    /*colors*/
+    --Paleblue :hsl(225, 100%, 94%);
+    --Brightblue :hsl(245, 75%, 52%);
+    --Verypaleblue : hsl(225, 100%, 98%);
+    --Desaturatedblue: hsl(224, 23%, 55%);
+    --Darkblue : hsl(223, 47%, 23%);
+    --color6: hsl(228, 45%, 44%);;
+
+    /*font*/
+    --font : 'Red Hat Display', sans-serif;
+}
+
+
+body{
+    background: var(--Paleblue);
+}
+main{
+    display: flex;
+    background: url('/images/pattern-background-desktop.svg') no-repeat;
+    background-size:  100%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+/*card*/
+.card{
+    background: var(--Verypaleblue);
+    width: auto;
+    height: 85vh;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    border-radius: 1.5rem;
+    margin-right: 1rem;
+    margin-left:1rem ;
+}
+.card__img{
+    background: url('/images/illustration-hero.svg') center /cover no-repeat;
+    width: 100%;
+    height: 30%;
+    margin-bottom: 2rem;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+.card__items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.card__title{
+    font-family: var(--font);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--Darkblue);
+    margin-bottom: 1rem;
+}
+.card__subtitle{
+    font-family: var(--font);
+    text-align: center;
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+    color: var(--Desaturatedblue);
+    margin-bottom: 1rem;
+}
+
+/*plan*/
+.plan{
+    display: flex;
+    justify-content: space-between;
+    background: hsla(225, 100%, 94%, 0.438);
+    border-radius: 1rem;
+    width: 80%;
+    height: 5rem;
+    margin: 0 auto;
+    margin-bottom: 1rem; 
+}
+.info{
+    display: flex;
+    width: 100%;
+}
+.info__img{
+    background: url('/images/icon-music.svg') center /contain no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 70%;
+    margin-right: .5rem;
+    margin-top: .7rem;
+    margin-left: .5rem;
+}
+.info__text{
+    object-fit: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: var(--font);
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    color: var(--Desaturatedblue);
+    margin-right: 1.9rem;
+}
+.info__text--color{
+    color: var(--Darkblue);
+    font-weight: bold;
+}
+
+.info__text--colorM{
+    color: var(--Brightblue);
+    font-weight: bold;
+    transition: .5s;
+}
+.info__text--colorM:hover{
+    color: var(--color6);
+    text-decoration: none;
+}
+
+
+
+/*button*/
+.button{
+    width: 80%;
+    border: none;
+    background: var(--Brightblue);
+    border-radius: 1rem;
+    padding: 1.2rem ;
+    box-shadow: 0px 20px 10px   rgba(0, 0, 0, 0.150);
+    transition: .3s;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+.button__text{
+    font-family: var(--font);
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.button:hover{
+    background: var(--color6);
+}
+
+.button__cancel{
+    font-family: var(--font);
+    border: none;
+    color: var(--Desaturatedblue);
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0 0;
+    transition: .3s;
+    background: var(--Verypaleblue) ;
+    margin-bottom: 2rem;
+}
+.button__cancel:hover{
+    color: var(--Darkblue );
+}
+
+
+@media (max-width: 430px) {
+    .info__text{
+        margin-right: .8rem;
+    }
+    
+}
